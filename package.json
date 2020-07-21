@@ -1,0 +1,40 @@
+{
+  "name": "corner-bot",
+  "version": "0.1.0",
+  "description": "Discord bot to automatically mute members not in the channel's designated game",
+  "engines": {
+    "node": ">=12 <15"
+  },
+  "main": "src/main.ts",
+  "devDependencies": {
+    "@types/node": "~14.0.23",
+    "@typescript-eslint/eslint-plugin": "~3.2.0",
+    "@typescript-eslint/parser": "~3.2.0",
+    "eslint": "~7.2.0",
+    "eslint-config-prettier": "~6.11.0",
+    "nodemon": "^2.0.4",
+    "prettier": "~2.0.5",
+    "rimraf": "~3.0.2",
+    "ts-node": "^8.10.2",
+    "tsutils": "~3.17.0",
+    "typescript": "~3.9.4"
+  },
+  "scripts": {
+    "clean": "rimraf coverage build tmp",
+    "dev": "nodemon",
+    "build": "tsc -p tsconfig.release.json",
+    "build:watch": "tsc -w -p tsconfig.release.json",
+    "start": "node build/src/main",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "author": "Carter Grimmeisen <cpgrimmeisen@gmail.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@formatjs/intl-listformat": "^2.2.1",
+    "@typeit/discord": "^4.0.8",
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "parse-duration": "^0.4.4",
+    "tslib": "~2.0.0"
+  }
+}
