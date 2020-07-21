@@ -20,6 +20,7 @@
     "typescript": "~3.9.4"
   },
   "scripts": {
+    "postinstall": "yarn dlx @yarnpkg/pnpify --sdk vscode",
     "clean": "rimraf coverage build tmp",
     "dev": "nodemon",
     "build": "tsc -p tsconfig.release.json",
